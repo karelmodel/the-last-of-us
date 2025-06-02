@@ -113,11 +113,17 @@ for temporada in sorted(df["temporada"].unique()):
     fig_votos.update_layout(xaxis=dict(tickmode='linear', tick0=1, dtick=1))
     st.plotly_chart(fig_votos, use_container_width=True)
 
+    # Lista de episódios
+    #st.markdown("📺 Lista de Episódios")
+    #for _, ep in df_temp.iterrows():
+    #    st.markdown(f"**🧾 [{ep['titulo']}]({ep['link']})**")
+    #    st.markdown(f"⭐ Nota: **{ep['nota']}**")
+    #    st.markdown(f"👥 Votos: **{ep['votos']:,}**")
+    #    st.markdown("---")
+
     with st.expander("📺 Lista de Episódios", expanded=False):
-        for temporada in sorted(df["temporada"].unique()):
-            st.subheader(f"Temporada {temporada}")
-            for _, ep in df[df["temporada"] == temporada].iterrows():
-                st.markdown(f"**🧾 [{ep['titulo']}]({ep['link']})**")
-                st.markdown(f"⭐ Nota: **{ep['nota']}**")
-                st.markdown(f"👥 Votos: **{ep['votos']:,}**")
-                st.markdown("---")
+        for _, ep in df_temp.iterrows():
+            st.markdown(f"**🧾 [{ep['titulo']}]({ep['link']})**")
+            st.markdown(f"⭐ Nota: **{ep['nota']}**")
+            st.markdown(f"👥 Votos: **{ep['votos']:,}**")
+            st.markdown("---")
