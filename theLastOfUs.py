@@ -60,7 +60,7 @@ def pegar_episodios_temporada(season_num):
 
 # --- Streamlit UI ---
 st.set_page_config(
-    page_title="The Last of Us - IMDb",  # Título da aba do navegador
+    page_title="The Last of Us",  # Título da aba do navegador
     page_icon="🎬",  # Ícone da aba (pode ser emoji ou URL)
     layout="centered"
 )
