@@ -81,7 +81,7 @@ for temporada in sorted(df["temporada"].unique()):
     media_nota = df_temp["nota"].mean()
     total_votos = df_temp["votos"].sum()
 
-    st.subheader(f"Temporada {temporada} — Média: {media_nota:.2f} ⭐, Votos: {total_votos:,}")
+    st.subheader(f"Temporada {temporada} — Média: {media_nota:.2f} ⭐, 👥 Votos: {total_votos:,}")
 
     # Gráfico de notas
     fig_rating = px.bar(
